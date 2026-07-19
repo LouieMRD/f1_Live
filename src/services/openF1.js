@@ -6,8 +6,14 @@ export async function getLaps(sessionKey) {
             `${BASE_URL}/laps?session_key=${sessionKey}`
         )
         const data = await response.json()
-        return data.results
+
+
+
+        return data
+
+
     } catch(error){
         console.log(error)
+        throw error
     }
 }
